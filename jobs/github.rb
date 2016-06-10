@@ -2,7 +2,6 @@ require 'rest-client'
 require 'json'
 require 'date'
 
-git_token = "f72ce632d00d8b983165984211b7978954777442"
 git_owner = "raumzeitlabor"
 git_project = "rzl-tuwat"
 
@@ -10,7 +9,7 @@ git_project = "rzl-tuwat"
 event_name = "git_issues_labeled_defects"
 
 ## the endpoint we'll be hitting
-uri = "https://api.github.com/repos/#{git_owner}/#{git_project}/issues?access_token=#{git_token}"
+uri = "https://api.github.com/repos/#{git_owner}/#{git_project}/issues"
 
 ## Create an array to hold our data points
 points = []
