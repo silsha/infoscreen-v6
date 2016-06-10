@@ -1,3 +1,12 @@
+<script type='text/javascript'>
+$(function() {
+  // These settings override the defaults set in application.coffee. You can do this on a per dashboard basis.
+  Dashing.widget_base_dimensions = [370, 340]
+  Dashing.numColumns = 5
+});
+</script>
+
+
 <% content_for :title do %>RaumZeitLabor Dashboard<% end %>
 <div class="gridster">
   <ul>
@@ -6,7 +15,7 @@
     </li>
 
     <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
-      <div data-id="Kontostand" data-view="Number" data-title="Current Valuation" data-prefix="€"></div>
+      <div data-id="Kontostand" data-view="Number" data-title="Kontostand" data-prefix="€"></div>
     </li>
 
     <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
@@ -17,15 +26,19 @@
       <div data-id="Temperatur_Raum_Beamerplattform" data-view="Number" data-title="Temperatur" data-suffix="°C"></div>
     </li>
 
-    <li data-row="2" data-col="2" data-sizex="1" data-sizey="1">
+    <li data-row="1" data-col="5" data-sizex="1" data-sizey="2">
       <div data-id="rnv" data-view="List" data-unordered="true" data-title="ÖPNV" data-moreinfo="in min"></div>
     </li>
 
-    <li data-row="2" data-col="3" data-sizex="2" data-sizey="1">
-      <div data-id="git_issues_labeled_defects" data-view="Graph" data-title="Offene Issues" data-moreinfo="Mehr unter github.com/raumzeitlabor/rzl-tuwat"></div>
+    <li data-row="2" data-col="4" data-sizex="2" data-sizey="1">
+      <div data-id="git_issues_labeled_defects" data-view="Graph" data-title="Offene Aufgaben" data-moreinfo="Mehr unter github.com/raumzeitlabor/rzl-tuwat"></div>
     </li>
 
-    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+    <li data-row="1" data-col="4" data-sizex="1" data-sizey="1">
+      <div data-id="Mitglieder" data-view="Number" data-title="Mitglieder*innen"></div>
+    </li>
+
+    <li data-row="2" data-col="2" data-sizex="1" data-sizey="1">
       <div data-id="twitter_mentions" data-view="Comments" data-title="Twitter" ></div>
       <i class="fa fa-twitter icon-background"></i>
     </li>
