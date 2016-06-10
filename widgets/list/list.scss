@@ -31,15 +31,16 @@ $moreinfo-color:    rgba(255, 255, 255, 0.7);
   }
 
   li {
-    margin-bottom: 5px;
+    margin-bottom: 3px;
   }
 
   .list-nostyle {
     list-style: none;
   }
 
-  .label {
+  .label, .line {
     color: $label-color;
+    font-size: 0.7em;
   }
 
   .value {

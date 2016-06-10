@@ -4,7 +4,7 @@ require 'json'
 
 url = URI.parse("http://s.rzl.so/api/simple.json")
 
-SCHEDULER.every '5m', :first_in => 0 do |job|
+SCHEDULER.every '30s', :first_in => 0 do |job|
     http = Net::HTTP.new(url.host, url.port)
     http.use_ssl = (url.scheme == 'https')
     http.verify_mode = OpenSSL::SSL::VERIFY_NONE

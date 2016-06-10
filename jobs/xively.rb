@@ -1,6 +1,6 @@
 require 'httparty'
 
-SCHEDULER.every '1m', :first_in => 0 do |job|
+SCHEDULER.every '20s', :first_in => 0 do |job|
   begin
     # Instatiates an empty data hash. This will store our variables and associated Xively value.
     data = {}
