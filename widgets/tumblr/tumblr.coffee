@@ -1,0 +1,1 @@
+class Dashing.Tumblr extends Dashing.Widget

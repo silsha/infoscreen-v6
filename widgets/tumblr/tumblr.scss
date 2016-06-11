@@ -1,0 +1,45 @@
+// ----------------------------------------------------------------------------
+// Sass declarations
+// ----------------------------------------------------------------------------
+$background-color:  #12b0c5;
+
+$title-color:       rgba(255, 255, 255, 1);
+$text-color:    rgba(255, 255, 255, 0.7);
+$moreinfo-color:    rgba(255, 255, 255, 0.7);
+
+// ----------------------------------------------------------------------------
+// Widget-tumblr styles
+// ----------------------------------------------------------------------------
+.widget-tumblr {
+
+  background-color: $background-color;
+  position: relative;
+  overflow: hidden;
+
+  img {
+    position: absolute;
+    top: -9999px;
+    bottom: -9999px;
+    left: -9999px;
+    right: -9999px;
+    margin: auto;
+  }
+
+  .title {
+    color: $title-color;
+  }
+
+  .text {
+    color: $text-color;
+    font-style: italic;
+  }
+
+  .more-info {
+    color: $moreinfo-color;
+  }
+
+  .updated-at {
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+}
