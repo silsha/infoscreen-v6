@@ -11,7 +11,7 @@
   <li data-foreach-item="deps">
     <span class="line" data-bind="item.lineLabel"></span>
     <span class="label" data-bind="item.direction"></span>
-    <span class="value" data-bind="item.time"></span>
+    <span class="value" data-bind="item.time | timeText"></span>
   </li>
 </ul>
 

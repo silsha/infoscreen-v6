@@ -20,5 +20,5 @@ SCHEDULER.every '30s', :first_in => 0 do |job|
     # Convert to JSON
     j = JSON.parse(res.body)
 
-    send_event("rnv", { deps: j["listOfDepartures"] })
+    send_event("rnv", { deps: j["listOfDepartures"][0..6] })
 end
