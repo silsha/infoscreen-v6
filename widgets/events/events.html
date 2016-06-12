@@ -1,0 +1,9 @@
+<h1 class="title" data-bind="title"></h1>
+<div data-foreach-event="events">
+  <div class="event-container">
+    <div class="start" data-bind="event.start | startText"></div>
+    <h1>
+      <span data-bind='event.title' class="eventtitle"></span>
+    </h1>
+  </div>
+</div>

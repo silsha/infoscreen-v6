@@ -1,0 +1,44 @@
+// ----------------------------------------------------------------------------
+// Sass declarations
+// ----------------------------------------------------------------------------
+$background-color:  #4183C5;
+
+$title-color:       rgba(255, 255, 255, 0.7);
+$moreinfo-color:    rgba(255, 255, 255, 0.7);
+
+$moreinfo-color:    rgba(255, 255, 255, 0.7);
+// ----------------------------------------------------------------------------
+// Widget-comment styles
+// ----------------------------------------------------------------------------
+.widget-events {
+
+  background-color: $background-color;
+
+  .event-container {
+    //display: none;
+    overflow: hidden;
+  }
+
+  .title {
+    color: $title-color;
+    margin-bottom: 15px;
+  }
+
+  .eventtitle {
+    color: white;
+    font-size: 1.2em;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: elipsis;
+    white-space: nowrap;
+    font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+
+  .start {
+    color: #ccccff;
+    font-size: 32px;
+    text-align: left;
+    padding-left: 30px;
+  }
+
+}
