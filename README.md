@@ -10,7 +10,7 @@ Die sechste Version des Infoscreens für das [RaumZeitLabor](https://raumzeitlab
 * Twitter
 * Nächste Veranstaltungen
 
-![infoscreen v6 Screenshot](https://cloud.githubusercontent.com/assets/31850/15981773/aad8ea0a-2f7a-11e6-9135-13f92782f4a4.png)
+![infoscreen v6 Screenshot](https://cloud.githubusercontent.com/assets/31850/15991963/6015871a-30c1-11e6-9f76-38a632d31790.png)
 
 
 ## Installation
