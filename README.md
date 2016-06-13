@@ -1,4 +1,6 @@
 # infoscreen v6
+[Demo auf Heroku](https://infoscreen-v6.herokuapp.com/rzl)
+
 Die sechste Version des Infoscreens für das [RaumZeitLabor](https://raumzeitlabor.de).
 
 ## Features
