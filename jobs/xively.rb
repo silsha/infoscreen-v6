@@ -24,7 +24,13 @@ SCHEDULER.every '20s', :first_in => 0 do |job|
           datapoints.push({x: Time.parse(dpval['at']).to_i, y: dpval['value'].to_f})
         end
       end
-      send_event(key, {current: val['current_value'], points: datapoints, displayedValue: val['current_value']})
+      moreinfo = ""
+      if key == 'Mitglieder'
+        mannheim = 317744
+        anteil = val['current_value'].to_f / mannheim.to_f
+        moreinfo = "#{anteil.round(5)}% von Mannheim"
+      end
+      send_event(key, {current: val['current_value'], points: datapoints, displayedValue: val['current_value'], moreinfo: moreinfo})
     end
   end
 end
