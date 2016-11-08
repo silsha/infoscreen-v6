@@ -5,7 +5,10 @@ Batman.mixin Batman.Filters,
     moment.locale('de')
     now = moment.utc()
     start = moment(str_time[0], "HH-mm").add(str_time[1], 'minutes')
-    "#{start.from(now)} (+#{str_time[1]})"
+    if str_time[1]
+      "#{start.from(now)} (+#{str_time[1]})"
+    else
+      "#{start.from(now)} (+?)"
 
 class Dashing.List extends Dashing.Widget
   ready: ->
