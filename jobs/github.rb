@@ -9,21 +9,14 @@ git_project = "rzl-tuwat"
 event_name = "git_issues_labeled_defects"
 
 ## the endpoint we'll be hitting
-uri = "https://api.github.com/repos/#{git_owner}/#{git_project}/issues?state=all"
+uri = "https://api.github.com/repos/#{git_owner}/#{git_project}"
 
 SCHEDULER.every '2m', :first_in => 0 do |job|
     puts "Getting #{uri}"
     response = RestClient.get uri
     issues = JSON.parse(response.body, symbolize_names: true)
 
-    max = issues.length
-    open = 0
-    issues.each do |val|
-        if val[:state] == 'open'
-            open += 1
-        end
-    end
 
-    send_event(event_name, {value: open, max:max, min: 0})
+    send_event(event_name, {current: issues[:open_issues_count]})
 
 end # SCHEDULER
