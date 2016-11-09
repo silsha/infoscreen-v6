@@ -2,7 +2,7 @@ require 'net/http'
 require 'uri'
 require 'json'
 
-url = URI.parse("http://s.rzl.so/api/simple.json")
+url = URI.parse("http://s.rzl.so/api/full.json")
 
 SCHEDULER.every '30s', :first_in => 0 do |job|
     http = Net::HTTP.new(url.host, url.port)
@@ -11,9 +11,11 @@ SCHEDULER.every '30s', :first_in => 0 do |job|
     response = http.request(Net::HTTP::Get.new(url.request_uri))
 
     # Convert to JSON
+    data = JSON.parse(response.body)
 
-    status = (response.body == '1' ? 'ok' : 'critical')
-    message = (response.body == '1' ? 'Geöffnet' : 'Geschlossen')
+    status = (data["status"] == '1' ? 'ok' : (data["status"] == '?' ? 'warning' : 'critical'))
+    message = (data["status"] == '1' ? 'Geöffnet' : (data["status"] == '?' ? 'Unbekannt' : 'Geschlossen'))
+    anwesend = data["details"]["laboranten"]
 
-    send_event("status", { status: status, message: message })
+    send_event("status", { status: status, message: message, anwesend: anwesend })
 end
