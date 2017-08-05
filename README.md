@@ -18,10 +18,10 @@ Die sechste Version des Infoscreens für das [RaumZeitLabor](https://raumzeitlab
 ## Installation
 
 ```bash
-gem install dashing # Install dashing
+gem install smashing # Install smashing
 gem install bundler # Install bundler
 git clone git@github.com:silsha/infoscreen-v6.git # Clone Repo
 cd infoscreen-v6
 bundle install
-dashing start
+smashing start
 ```
