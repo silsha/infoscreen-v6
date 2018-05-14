@@ -25,3 +25,7 @@ cd infoscreen-v6
 bundle install
 smashing start
 ```
+
+## Hilfe
+
+Das Dashboard basiert auf [Smashing](https://smashing.github.io/), dort findet ihr auch einen brauchbaren Einstieg wie Elemente (als ./widgets) unter ./dashboards eingebunden werden, bzw. was diese an Übergabeparametern aus den ./jobs und erwarten.
