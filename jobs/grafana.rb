@@ -5,7 +5,7 @@ SCHEDULER.every '20s', :first_in => 0 do |job|
   begin
     # Instatiates an empty data hash. This will store our variables and associated Xively value.
     data = {}
-    grafana_data = HTTParty.post('http://kunterbunt.vm.rzl/api/datasources/proxy/1/render', { :body => 'target=alias(rzl.service.heizung.temp.beamerplattform%2C%20\'Temperatur_Beamerplattform\')&from=-24h&until=now&format=json&maxDataPoints=10'})
+    grafana_data = HTTParty.post('http://kunterbunt.vm.rzl/api/datasources/proxy/1/render', { :body => 'target=alias(rzl.service.heizung.temp.beamerplattform%2C%20\'Temperatur_Beamerplattform\')&target=alias(scale(rzl.service.power.hauptraum.power%2C%200.001)%2C%20\'Stromverbrauch_Hauptraum\')&from=-24h&until=now&format=json&maxDataPoints=50'})
     # This code assigns the variables to incoming Xively data and stores the result in a hash
     grafana_data.each do |n|
         data[n['target']] = n
