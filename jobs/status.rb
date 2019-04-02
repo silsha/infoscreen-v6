@@ -1,6 +1,6 @@
 require 'net/http'
 require 'uri'
-require 'json'
+require 'JSON'
 
 url = URI.parse("http://s.rzl.so/api/full.json")
 
